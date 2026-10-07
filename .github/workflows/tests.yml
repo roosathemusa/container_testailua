@@ -22,3 +22,7 @@ jobs:
 
       - name: Testi 2
         run: npm test -- test2 > testi2.txt 2>&1
+
+      - name: Ilmoita virheestä
+        if: failure()
+        run: echo "Testit epäonnistuivat"
